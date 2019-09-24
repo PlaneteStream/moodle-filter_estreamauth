@@ -47,7 +47,10 @@ class filter_estreamauth extends moodle_text_filter {
     }
     public function filter($text, array $options = array()) {
         global $USER;
-        $delta = $this->userobfuscate($USER->username);
+        $delta = '';
+        if (!empty($USER->username)) {
+            $delta = $this->userobfuscate($USER->username);
+        }
         return str_replace('ESDLTA', $delta, $text);
     }
 }
