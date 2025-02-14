@@ -21,9 +21,10 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  */
-// require_once('../../config.php');
-defined('MOODLE_INTERNAL') || die();
-class filter_estreamauth extends moodle_text_filter {
+
+namespace filter_estreamauth;
+
+class text_filter extends \moodle_text_filter {
 
     private function userobfuscate($strx) {
 
