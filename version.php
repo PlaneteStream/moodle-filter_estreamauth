@@ -25,7 +25,10 @@
 defined('MOODLE_INTERNAL') || die();
 $plugin            = new StdClass();
 $plugin->component = 'filter_estreamauth';
-$plugin->version   = 2021122300;
+$plugin->version   = 2025022400;
 $plugin->requires  = 2012062500;
-$plugin->release   = '6.34';
+$plugin->release   = '7.0';
 $plugin->maturity  = MATURITY_STABLE;
+$plugin->dependencies = array(
+    'assignsubmission_estream' => ANY_VERSION
+);
